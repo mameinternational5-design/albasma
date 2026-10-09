@@ -16,6 +16,6 @@ export default defineConfig({
     server: { entry: "server" },
     // Prerender every page to static HTML so the site can be hosted on plain static hosts (e.g. Plesk).
     pages,
-    prerender: { enabled: true, autoStaticPathsDiscovery: false },
+    prerender: { enabled: false, autoStaticPathsDiscovery: false },
   },
 });
