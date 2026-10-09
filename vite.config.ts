@@ -1,3 +1,4 @@
+import netlify from '@netlify/vite-plugin-tanstack-start';
 // @lovable.dev/vite-tanstack-config already includes the core plugins — do NOT add them manually.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
@@ -10,6 +11,7 @@ const pages = [
 ].map((path) => ({ path }));
 
 export default defineConfig({
+  plugins: [netlify()],
   tanstackStart: {
     server: { entry: "server" },
     // Prerender every page to static HTML so the site can be hosted on plain static hosts (e.g. Plesk).
